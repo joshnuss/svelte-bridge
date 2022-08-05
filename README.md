@@ -4,16 +4,15 @@ Use your Svelte componentes from React & Vue.
 
 This plugin generates React & Vue wrapper components in `dist/react` and `dist/vue`.
 
-
 ## Setup
 
-Install the package
+Install the package:
 
 ```bash
 pnpm install -D vite-plugin-svelte-bridge
 ```
 
-Add plugins in your `vite.config.js`:
+Add `react` and `vue` plugins to `vite.config.js`:
 
 ```javascript
 // vite.config.js
@@ -26,7 +25,19 @@ export default defineConfig({
 })
 ```
 
-Specify which components should be bridged in your `package.json`:
+Update `package.json`:
+
+1. Add `dist/react` and `dist/vue` to the `exports` section
+
+```javascript
+"exports": {
+  ".": "./dist/index.js",
+  "./react/*": "./dist/react/*",
+  "./vue/*": "./dist/vue/*"
+}
+```
+
+2. Specify which components should be wrapped:
 
 ```javascript
 "bridge": {
@@ -35,15 +46,6 @@ Specify which components should be bridged in your `package.json`:
 ```
 
 This will generate a `dist/react/MyComponent.jsx` and a `dist/vue/MyComponent.vue`.
-
-Also add the `dist/react` and `dist/vue` to the `exports` section in `package.json`:
-
-```javascript
-"exports": {
-  "./react/*": "./dist/react/*",
-  "./vue/*": "./dist/vue/*"
-}
-```
 
 ## Usage
 
