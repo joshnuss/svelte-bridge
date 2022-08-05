@@ -49,30 +49,26 @@ Also add the `dist/react` and `dist/vue` to the `exports` section in `package.js
 
 ### React
 
-To access a component from a React project.
-
-First, install the package:
+To access a component from a React project, install the package:
 
 ```bash
 pnpm install -D my-svelte-lib
 ```
 
-Then import the component from the `reac5/` folder:
+Then import the component from the `react/` folder:
 
 ```jsx
 // in src/App.jsx
 import MyComponent from 'my-svelte-lib/react/MyComponent.jsx'
 
-export default App() {
+export default function App() {
   return <MyComponent prop={42} onClick={() => alert('clicked')}/>
 }
 ```
 
 ### Vue
 
-To access a component from a Vue project.
-
-First, install the package:
+To access a component from a Vue project, install the package:
 
 ```bash
 pnpm install -D my-svelte-lib
