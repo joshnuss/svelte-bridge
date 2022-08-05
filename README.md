@@ -36,7 +36,7 @@ Specify which components should be bridged in your `package.json`:
 
 This will generate a `dist/react/MyComponent.jsx` and a `dist/vue/MyComponent.vue`.
 
-Also add the `dist/react` and `dist/vue` to the `exports` section in `pacakge.json`:
+Also add the `dist/react` and `dist/vue` to the `exports` section in `package.json`:
 
 ```javascript
 "exports": {
@@ -49,10 +49,19 @@ Also add the `dist/react` and `dist/vue` to the `exports` section in `pacakge.js
 
 ### React
 
-To access a component from a React project:
+To access a component from a React project.
+
+First, install the package:
+
+```bash
+pnpm install -D my-svelte-lib
+```
+
+Then import the component from the `reac5/` folder:
 
 ```jsx
-import MyComponent from 'my-lib/react/MyComponent.jsx'
+// in src/App.jsx
+import MyComponent from 'my-svelte-lib/react/MyComponent.jsx'
 
 export default App() {
   return <MyComponent prop={42} onClick={() => alert('clicked')}/>
@@ -61,11 +70,20 @@ export default App() {
 
 ### Vue
 
-To access a component from a Vue project:
+To access a component from a Vue project.
+
+First, install the package:
+
+```bash
+pnpm install -D my-svelte-lib
+```
+
+Then import the component from the `vue/` folder:
 
 ```vue
+<!-- in src/App.vue -->
 <script setup>
-  import MyComponent from 'my-lib/vue/MyComponent.vue'
+  import MyComponent from 'my-svelte-lib/vue/MyComponent.vue'
 </script>
 
 <template>
