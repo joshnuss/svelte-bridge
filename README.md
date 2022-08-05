@@ -2,7 +2,7 @@
 
 Use your Svelte componentes from React & Vue.
 
-This plugin generates React & Vue wrapper components in `dist/react` and `dist/vue`.
+This plugin generates wrapper components in `dist/react` and `dist/vue` at build time.
 
 ## Setup
 
@@ -45,7 +45,7 @@ Update `package.json`:
 }
 ```
 
-This will generate a `dist/react/MyComponent.jsx` and a `dist/vue/MyComponent.vue`.
+Running `vite build` will generate a `dist/react/MyComponent.jsx` and a `dist/vue/MyComponent.vue`.
 
 ## Usage
 
@@ -91,10 +91,11 @@ Then import the component from the `vue/` folder:
 
 ## Caveats
 
-The following Svelte features are not supported:
+The following features are not supported (yet?):
 
 - Slots
 - 2-way data binding
+- Types
 
 ## License
 
