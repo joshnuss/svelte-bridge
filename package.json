@@ -2,5 +2,15 @@
   "name": "vite-plugin-svelte-bridge",
   "private": true,
   "version": "0.0.0",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^3.0.5"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  }
 }
