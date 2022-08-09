@@ -17,7 +17,7 @@ Add `react` and `vue` plugins to `vite.config.js`:
 ```javascript
 // vite.config.js
 import { defineConfig } from 'vite'
-import { svelte } from 'vite-plugin-svelte'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { react, vue } from 'vite-plugin-svelte-bridge'
 
 export default defineConfig({
