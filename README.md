@@ -96,6 +96,7 @@ The following features are not supported (yet?):
 - Slots
 - 2-way data binding
 - Types
+- Angular, Solid.js
 
 ## License
 
