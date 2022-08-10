@@ -3,7 +3,7 @@ import fs from 'fs'
 
 let config
 
-export default function react() {
+export default function vue() {
   return {
     name: 'svelte-bridge-vue',
     configResolved(resolvedConfig) {
