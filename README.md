@@ -1,6 +1,6 @@
 # vite-plugin-svelte-bridge
 
-Use your Svelte components from React & Vue.
+Write Svelte components and use them from React & Vue.
 
 This plugin generates wrapper components in `dist/react` and `dist/vue` at build time.
 
